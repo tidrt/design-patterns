@@ -7,5 +7,5 @@ public class ProductTest {
 
         PhysicalProduct physicalProduct = new PhysicalProduct();
         physicalProduct.setHasPhysicalDimensions(false);
-    }   
+    }
 }

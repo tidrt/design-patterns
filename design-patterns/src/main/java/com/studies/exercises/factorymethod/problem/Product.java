@@ -29,4 +29,13 @@ public class Product {
     public void setHasPhysicalDimensions(boolean hasPhysicalDimensions) {
         this.hasPhysicalDimensions = hasPhysicalDimensions;
     }
+ 
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", hasPhysicalDimensions=" + hasPhysicalDimensions +
+                '}';
+    }
 }
