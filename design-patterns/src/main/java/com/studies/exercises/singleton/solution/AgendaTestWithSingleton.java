@@ -10,14 +10,14 @@ public class AgendaTestWithSingleton {
         // reserveEAGER("Sexta");
         // reserveEAGER("Sabado");
 
-        // with this code we can create new instances even if the constructor is private
+        /* with this REFLECTION code we can create new instances even if the constructor is private
         Constructor<AgendaSingletonLAZY> perkyConstructor = AgendaSingletonLAZY.class.getDeclaredConstructor();
         perkyConstructor.setAccessible(true);
         AgendaSingletonLAZY perkyAgenda = perkyConstructor.newInstance();
-        AgendaSingletonLAZY perkyAgenda1  = perkyConstructor.newInstance();
+        AgendaSingletonLAZY perkyAgenda1  = perkyConstructor.newInstance();*/
 
-        reserveLAZY("Sexta");
-        reserveLAZY("Sabado");
+        reserveEnum("Sexta");
+        reserveEnum("Sabado");
 
     }
 
@@ -29,6 +29,11 @@ public class AgendaTestWithSingleton {
 
     public static void reserveLAZY(String day){
         AgendaSingletonLAZY agenda = AgendaSingletonLAZY.getInstance();
+        agenda.toOcuppy(day);
+        System.out.println(agenda.getDays());
+    }
+    public static void reserveEnum(String day){
+        AgendaSingletonEnum agenda = AgendaSingletonEnum.getInstance();
         agenda.toOcuppy(day);
         System.out.println(agenda.getDays());
     }
