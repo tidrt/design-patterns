@@ -10,7 +10,7 @@ public class AgendaSingletonLAZY {
 
     private Map<String, Boolean> availableDays = new HashMap<>();
 
-    public AgendaSingletonLAZY(){
+    private AgendaSingletonLAZY(){
         availableDays.put("Segunda", true);
         availableDays.put("Terça", true);
         availableDays.put("Quarta", true);

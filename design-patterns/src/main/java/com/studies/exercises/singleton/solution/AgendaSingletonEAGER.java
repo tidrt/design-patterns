@@ -9,7 +9,7 @@ public class AgendaSingletonEAGER {
 
     private Map<String, Boolean> availableDays = new HashMap<>();
 
-    public AgendaSingletonEAGER(){
+    private AgendaSingletonEAGER(){
         availableDays.put("Segunda", true);
         availableDays.put("Terça", true);
         availableDays.put("Quarta", true);
